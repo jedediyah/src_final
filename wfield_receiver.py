@@ -20,7 +20,7 @@ def whaler_receive():
     # Networking
     sock = socket.socket(socket.AF_INET, # Internet
                          socket.SOCK_DGRAM) # UDP
-    UDP_IP = "10.0.1.155"
+    UDP_IP = 'localhost'
     UDP_PORT = 5005
     print('Starting UDP server on port ' + str(UDP_PORT))
     sock.bind((UDP_IP, UDP_PORT))
