@@ -31,6 +31,7 @@ RUN echo "while rosbag play ${WS}/footsteps_2017-05-02-14-40-59.bag && python ${
 
 EXPOSE 8000
 EXPOSE 8001
+EXPOSE 5005
 ENV ROS_MASTER_URI http://127.0.0.1:8001
 
 # startup script
