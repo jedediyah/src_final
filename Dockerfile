@@ -45,7 +45,6 @@ ADD perception.py perception.py
 ADD point_cloud2.py point_cloud2.py
 ADD valcontrol.py valcontrol.py
 ADD val_walk_controller.py val_walk_controller.py
-ADD wfield_control.py wfield_control.py
 ADD whalers_field_comms.py whalers_field_comms.py
 # simple HTTP server and a roscore
 ADD startup.bash startup.bash
