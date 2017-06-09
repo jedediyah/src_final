@@ -8,6 +8,7 @@ RUN apt-get update \
     ros-indigo-catkin \
     ros-indigo-ihmc-msgs \
     ros-indigo-rosbag \
+    ros-indigo-cv-bridge \
     ros-indigo-tf \
     ros-indigo-tf2 \
  && rm -rf /var/lib/apt/lists/*
