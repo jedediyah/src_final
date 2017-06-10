@@ -16,7 +16,6 @@ from sensor_msgs.msg import Image
 from stereo_msgs.msg import DisparityImage
 
 from math import sqrt, isnan
-from matplotlib import pyplot as plt
 
 import time
 import cPickle

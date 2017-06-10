@@ -10,7 +10,7 @@ from srcsim.srv import StartTask
 
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from math import sqrt, isnan, sin, cos, atan, atan2, floor, pi
 from listalgebra import *
 
@@ -109,28 +109,28 @@ class FieldController:
         print 'Controls: ', self.position_task1_controls
         # TODO: Print some sort of direction indicator for Val 
         # Val
-        X = []
-        Z = [] 
-        for position in self.position_val:
-            X.append(position[0])
-            Z.append(position[2]) 
-        plt.plot(X,Z,'bo')
-        # Dish 
-        X = []
-        Z = [] 
-        for position in self.position_task1_dish:
-            X.append(position[0])
-            Z.append(position[2]) 
-        plt.plot(X[1:],Z[1:],'ro')
-        # Dish controls
-        X = []
-        Z = [] 
-        for position in self.position_task1_controls:
-            X.append(position[0])
-            Z.append(position[2]) 
-        plt.plot(X[1:],Z[1:],'go')
-        plt.axis('equal')
-        plt.show()
+        # X = []
+        # Z = [] 
+        # for position in self.position_val:
+        #     X.append(position[0])
+        #     Z.append(position[2]) 
+        # plt.plot(X,Z,'bo')
+        # # Dish 
+        # X = []
+        # Z = [] 
+        # for position in self.position_task1_dish:
+        #     X.append(position[0])
+        #     Z.append(position[2]) 
+        # plt.plot(X[1:],Z[1:],'ro')
+        # # Dish controls
+        # X = []
+        # Z = [] 
+        # for position in self.position_task1_controls:
+        #     X.append(position[0])
+        #     Z.append(position[2]) 
+        # plt.plot(X[1:],Z[1:],'go')
+        # plt.axis('equal')
+        # plt.show()
         
     def updatePosition_task1_dish(self):
         # Looks for the task1 dish in the Left head camera
