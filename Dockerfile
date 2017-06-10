@@ -39,6 +39,7 @@ ENV ROS_MASTER_URI http://127.0.0.1:8001
 # startup script
 ADD communications.py communications.py
 ADD cv2_addons.py cv2_addons.py
+ADD echoserver.py echoserver.py
 ADD keyboard_teleop.py keyboard_teleop.py
 ADD listalgebra.py listalgebra.py
 ADD perception.py perception.py
@@ -46,6 +47,8 @@ ADD point_cloud2.py point_cloud2.py
 ADD valcontrol.py valcontrol.py
 ADD val_walk_controller.py val_walk_controller.py
 ADD whalers_field_comms.py whalers_field_comms.py
+ADD whalers_field_control.py whalers_field_control.py
+ADD wfield_receiver.py wfield_receiver.py 
 # simple HTTP server and a roscore
 ADD startup.bash startup.bash
 CMD ["./startup.bash"]
