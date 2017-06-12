@@ -29,6 +29,7 @@ import sys
 import time
 
 PI = pi #3.14159265358979
+IP_ADDRESS = '192.168.2.150'   # IP of OCU machine
 
 class FieldController:
     def __init__(self):
@@ -58,7 +59,7 @@ class FieldController:
         self.commands_to_run = []
         
         # Networking
-        self.UDP_IP = '' #'10.0.1.155'
+        self.UDP_IP = IP_ADDRESS #'10.0.1.155'
         self.UDP_PORT = 4004
         self.sock = socket.socket(socket.AF_INET,
                                   socket.SOCK_DGRAM)
@@ -853,7 +854,9 @@ class FieldController:
             
 
 if __name__== "__main__":
-    time.sleep(10)
+    print 'Starting whalers_field_control.  Waiting 30 seconds...'
+    time.sleep(30)
+    print 'Whalers_field_control starting'
     fieldControl = FieldController()
     #fieldControl.run()
     fieldControl.run_semi_autonomous()
