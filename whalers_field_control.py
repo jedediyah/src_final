@@ -26,6 +26,7 @@ from communications import Transceiver
 from communications import MessageMaker
 
 import sys
+import time
 
 PI = pi #3.14159265358979
 
@@ -852,6 +853,7 @@ class FieldController:
             
 
 if __name__== "__main__":
+    time.sleep(10)
     fieldControl = FieldController()
     #fieldControl.run()
     fieldControl.run_semi_autonomous()

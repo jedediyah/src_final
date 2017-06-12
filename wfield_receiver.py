@@ -10,6 +10,7 @@ from std_msgs.msg import String
 import socket 
 
 import sys
+import time
 
 def whaler_receive():
 
@@ -35,6 +36,7 @@ def whaler_receive():
 
 if __name__ == '__main__':
     try: 
+        time.sleep(10)
         whaler_receive()
     except rospy.ROSInterruptException:
         rospy.loginfo('wfield_receiver ERROR')
