@@ -6,9 +6,9 @@ RUN apt-get update \
     build-essential \
     python-catkin-tools \
     ros-indigo-catkin \
+    ros-indigo-cv-bridge \
     ros-indigo-ihmc-msgs \
     ros-indigo-rosbag \
-    ros-indigo-cv-bridge \
     ros-indigo-tf \
     ros-indigo-tf2 \
  && rm -rf /var/lib/apt/lists/*
@@ -30,11 +30,11 @@ RUN . /opt/ros/indigo/setup.sh \
 #RUN echo "while rosbag play ${WS}/footsteps_2017-05-02-14-40-59.bag && python ${WS}/src/srcsim/scripts/rossleep.py 8; do date; done" \
 #  > do_footsteps.bash
 
-EXPOSE 8000
-EXPOSE 8001
 EXPOSE 5005/udp
 EXPOSE 6006/udp
 EXPOSE 4004/udp
+EXPOSE 8000
+EXPOSE 8001
 #ENV ROS_MASTER_URI http://127.0.0.1:8001
 
 # startup script
