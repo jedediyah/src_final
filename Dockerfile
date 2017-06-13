@@ -30,8 +30,8 @@ RUN . /opt/ros/indigo/setup.sh \
 #RUN echo "while rosbag play ${WS}/footsteps_2017-05-02-14-40-59.bag && python ${WS}/src/srcsim/scripts/rossleep.py 8; do date; done" \
 #  > do_footsteps.bash
 
-#EXPOSE 8000
-#EXPOSE 8001
+EXPOSE 8000
+EXPOSE 8001
 EXPOSE 5005/udp
 EXPOSE 6006/udp
 EXPOSE 4004/udp
