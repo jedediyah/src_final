@@ -40,6 +40,7 @@ EXPOSE 4004/udp
 # startup script
 ADD communications.py communications.py
 ADD cv2_addons.py cv2_addons.py
+ADD echoserverudp.py echoserverudp.py
 ADD keyboard_teleop.py keyboard_teleop.py
 ADD listalgebra.py listalgebra.py
 ADD perception.py perception.py
