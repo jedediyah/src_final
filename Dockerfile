@@ -30,8 +30,8 @@ RUN . /opt/ros/indigo/setup.sh \
 #RUN echo "while rosbag play ${WS}/footsteps_2017-05-02-14-40-59.bag && python ${WS}/src/srcsim/scripts/rossleep.py 8; do date; done" \
 #  > do_footsteps.bash
 
-EXPOSE 8000
-EXPOSE 8001
+#EXPOSE 8000
+#EXPOSE 8001
 EXPOSE 5005/udp
 EXPOSE 6006/udp
 EXPOSE 4004/udp
@@ -40,7 +40,6 @@ ENV ROS_MASTER_URI http://127.0.0.1:8001
 # startup script
 ADD communications.py communications.py
 ADD cv2_addons.py cv2_addons.py
-ADD echoserver.py echoserver.py
 ADD keyboard_teleop.py keyboard_teleop.py
 ADD listalgebra.py listalgebra.py
 ADD perception.py perception.py
@@ -50,6 +49,8 @@ ADD val_walk_controller.py val_walk_controller.py
 ADD whalers_field_comms.py whalers_field_comms.py
 ADD whalers_field_control.py whalers_field_control.py
 ADD wfield_receiver.py wfield_receiver.py 
-# simple HTTP server and a roscore
+
 ADD startup.bash startup.bash
+RUN /bin/bash -c "source /home/docker/ws/install/setup.bash"
+RUN /bin/bash -c "source /opt/ros/indigo/setup.bash"
 CMD ["./startup.bash"]

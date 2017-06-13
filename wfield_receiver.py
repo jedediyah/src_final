@@ -36,9 +36,7 @@ def whaler_receive():
 
 if __name__ == '__main__':
     try: 
-        print 'Starting wfield_receiver.  Waiting 30 seconds...'
-        time.sleep(30)
-        print 'Starting wfield_receiver...'
+        time.sleep(5)
         whaler_receive()
     except rospy.ROSInterruptException:
         rospy.loginfo('wfield_receiver ERROR')
