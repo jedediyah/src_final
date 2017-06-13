@@ -35,7 +35,7 @@ RUN . /opt/ros/indigo/setup.sh \
 EXPOSE 5005/udp
 EXPOSE 6006/udp
 EXPOSE 4004/udp
-ENV ROS_MASTER_URI http://127.0.0.1:8001
+#ENV ROS_MASTER_URI http://127.0.0.1:8001
 
 # startup script
 ADD communications.py communications.py
